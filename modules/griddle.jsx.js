@@ -649,7 +649,7 @@ var Griddle = React.createClass({
     _toggleSelectAll: function _toggleSelectAll() {
         var visibleRows = [];
         if (this.props.enableInfiniteScroll) {
-            visibleRows = this.getCurrentResults();
+            visibleRows = this.props.results;
         } else {
             visibleRows = this.getDataForRender(this.getCurrentResults(), this.columnSettings.getColumns(), true);
         }
